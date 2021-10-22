@@ -1,7 +1,7 @@
 <template>
   <section v-editable="blok">
     <h1>{{ blok.name }}</h1>
-    <atom-image :image="blok.content.featured_image" size="700x0" />
+    <atom-image v-if="blok.content.featured_image" :image="blok.content.featured_image" size="700x0" />
     <component
       v-for="blok in blok.content.body"
       :key="blok._uid"

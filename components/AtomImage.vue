@@ -1,5 +1,5 @@
 <template>
-  <figure v-if="image">
+  <figure>
     <img
       :src="transformImage(image.filename, size)"
       :width="size.split('x')[0]"
