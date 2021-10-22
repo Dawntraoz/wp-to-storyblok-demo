@@ -1,6 +1,6 @@
 <template>
-  <article v-editable="blok">
-    <header>
+  <article v-editable="blok.content">
+    <header class="py-12 text-center">
       <h1>{{ blok.name }}</h1>
     </header>
     <atom-rich-text :rich-text="blok.content.excerpt" />

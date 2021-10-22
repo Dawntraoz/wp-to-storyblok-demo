@@ -1,5 +1,5 @@
 <template>
-  <component :is="`h${blok.level}`">
+  <component v-editable="blok" :is="`h${blok.level}`">
     {{ blok.content }}
   </component>
 </template>

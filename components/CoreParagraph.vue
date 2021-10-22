@@ -1,5 +1,5 @@
 <template>
-  <atom-rich-text :rich-text="blok.content" />
+  <atom-rich-text v-editable="blok" :rich-text="blok.content" />
 </template>
 
 <script>
