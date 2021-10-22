@@ -1,13 +1,13 @@
 <template>
-  <div
-    v-editable="blok"
-    class="px-6">
+  <section v-editable="blok">
+    <h1>{{ blok.name }}</h1>
+    <atom-image :image="blok.content.featured_image" size="700x0" />
     <component
-      v-for="blok in blok.body"
+      v-for="blok in blok.content.body"
       :key="blok._uid"
       :blok="blok"
       :is="blok.component" />
-  </div>
+  </section>
 </template>
 
 <script>

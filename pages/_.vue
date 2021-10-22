@@ -1,8 +1,9 @@
 <template>
-  <page
+  <component
     v-if="story.content.component"
     :key="story.content._uid"
-    :blok="story.content" />
+    :blok="story"
+    :is="story.content.component" />
 </template>
 
 <script>
@@ -45,7 +46,8 @@ export default {
 
     // Load the JSON from the API - loadig the home content (index page)
     return context.app.$storyapi.get(`cdn/stories/${fullSlug}`, {
-      version
+      version,
+      resolve_relations: 'post.categories'
     }).then((res) => {
       return res.data
     }).catch((res) => {
