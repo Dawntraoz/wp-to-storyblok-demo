@@ -1,5 +1,5 @@
 <template>
-  <div v-if="richTextHTML" v-html="richTextHTML" class="prose"></div>
+  <div v-if="richTextHTML" v-html="richTextHTML" class="prose mx-auto"></div>
 </template>
 
 <script>
