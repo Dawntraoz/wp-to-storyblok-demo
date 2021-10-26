@@ -1,5 +1,5 @@
 <template>
-  <article>
+  <article v-editable="article.content">
     <header class="max-w-prose mx-auto text-center">
       <h2>{{ article.name }}</h2>
       <p class="pt-4">
@@ -9,7 +9,6 @@
     </header>
     <nuxt-link :to="article.full_slug">
       <atom-image
-        v-editable="article"
         v-if="article.content.featured_image"
         :image="article.content.featured_image"
         size="1024x0"
@@ -17,7 +16,7 @@
       />
     </nuxt-link>
     <div class="max-w-prose mx-auto">
-      <atom-rich-text v-editable="article" :rich-text="article.content.excerpt"></atom-rich-text>
+      <atom-rich-text :rich-text="article.content.excerpt"></atom-rich-text>
       <nuxt-link :to="article.full_slug" class="block py-4">Read more >></nuxt-link>
       <p>
         Posted in

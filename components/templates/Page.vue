@@ -4,7 +4,7 @@
       <h1>{{ blok.name }}</h1>
     </header>
     <atom-image v-if="blok.content.featured_image" :image="blok.content.featured_image" size="1024x0" />
-    <div class="max-w-prose mx-auto">
+    <div class="max-w-prose mx-auto pb-12">
       <component
         v-for="blok in blok.content.body"
         :key="blok._uid"
