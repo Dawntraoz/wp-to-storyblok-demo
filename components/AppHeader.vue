@@ -2,7 +2,7 @@
   <header class="py-6 border-b">
       <nav class="container mx-auto px-4 flex items-center justify-between">
         <p>
-          <span class="block text-3xl font-bold">WP 2 Storyblok</span>
+          <nuxt-link to="/" class="block text-3xl font-bold">WP 2 Storyblok</nuxt-link>
           Migration sample site
         </p>
         <ul class="flex gap-6">
