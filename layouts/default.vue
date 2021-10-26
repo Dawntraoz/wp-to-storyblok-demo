@@ -55,4 +55,8 @@ h5,
 h6 {
   @apply text-xl;
 }
+
+a {
+  @apply text-blue-500;
+}
 </style>
