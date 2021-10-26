@@ -7,7 +7,15 @@
         <span class="text-blue-500">{{ new Intl.DateTimeFormat('en-EN', { day: 'numeric', month: 'long', year: 'numeric' }).format(new Date(article.first_published_at)) }}</span>
       </p>
     </header>
-    <atom-image v-editable="article" v-if="article.content.featured_image" :image="article.content.featured_image" size="1024x0" class="py-4" />
+    <nuxt-link :to="article.full_slug">
+      <atom-image
+        v-editable="article"
+        v-if="article.content.featured_image"
+        :image="article.content.featured_image"
+        size="1024x0"
+        class="py-4"
+      />
+    </nuxt-link>
     <div class="max-w-prose mx-auto">
       <atom-rich-text v-editable="article" :rich-text="article.content.excerpt"></atom-rich-text>
       <nuxt-link :to="article.full_slug" class="block py-4">Read more >></nuxt-link>
